@@ -121,7 +121,11 @@
         let btn4 = document.getElementById("btn4");
         let btn5 = document.getElementById("btn5");
         let btn6 = document.getElementById("btn6");
-        tg.expand();          
+        tg.expand();
+
+        btn1.addEventListener("click", () => {
+            tg.sendData('1');
+        });
     </script>      
 </body>
 </html>
