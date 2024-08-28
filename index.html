@@ -24,6 +24,42 @@
       .h1 {
         margin-top: 20px;
       }
+
+      .f1 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .f2 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .f3 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .f4 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .f5 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .f6 {
+        display: none;
+        text-align: center;
+        margin-top: 100px;
+      }
       
       .center {
         display: block;
@@ -44,6 +80,12 @@
       .img {
         width: 135px;
         margin-bottom: -25px;
+      }
+      
+      .img2 {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
       
       .item {
@@ -82,6 +124,7 @@
     </style>
 </head>
 <body>
+    <img src="shop.png" class="img2">
     <div class="center">
       <div class="container">
         <div class="inner">
@@ -112,6 +155,42 @@
         </div>
       </div>      
     </div>
+    <form id="one" class="f1">
+        <input type=text placeholder="ID в Pubg Mobile" id="id1">
+        <div id="error1"></div>
+        <button id="b1"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="two" class="f2">
+        <input type=text placeholder="ID в Pubg Mobile" id="id2">
+        <div id="error2"></div>
+        <button id="b2"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="three" class="f3">
+        <input type=text placeholder="ID в Pubg Mobile" id="id3">
+        <div id="error3"></div>
+        <button id="b3"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="four" class="f4">
+        <input type=text placeholder="ID в Pubg Mobile" id="id4">
+        <div id="error4"></div>
+        <button id="b4"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="five" class="f5">
+        <input type=text placeholder="ID в Pubg Mobile" id="id5">
+        <div id="error5"></div>
+        <button id="b5"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="six" class="f6">
+        <input type=text placeholder="ID в Pubg Mobile" id="id6">
+        <div id="error6"></div>
+        <button id="b6"></button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
     <script>
         let tg = window.Telegram.WebApp;
@@ -121,10 +200,16 @@
         let btn4 = document.getElementById("btn4");
         let btn5 = document.getElementById("btn5");
         let btn6 = document.getElementById("btn6");
+        let b1 = document.getElementById("b1");
+        let b2 = document.getElementById("b2");
+        let b3 = document.getElementById("b3");
+        let b4 = document.getElementById("b4");
+        let b5 = document.getElementById("b5");
+        let b6 = document.getElementById("b6");
         tg.expand();
 
         btn1.addEventListener("click", () => {
-            tg.sendData('1');
+            g
         });
 
         btn2.addEventListener("click", () => {
