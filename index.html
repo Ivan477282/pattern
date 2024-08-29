@@ -208,37 +208,31 @@
     </div>
     <form id="one">
         <input type=text placeholder="ID в Pubg Mobile" id="id1">
-        <div id="error1"></div>
         <button id="b1" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <form id="two">
         <input type=text placeholder="ID в Pubg Mobile" id="id2">
-        <div id="error2"></div>
         <button id="b2" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <form id="three">
         <input type=text placeholder="ID в Pubg Mobile" id="id3">
-        <div id="error3"></div>
         <button id="b3" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <form id="four">
         <input type=text placeholder="ID в Pubg Mobile" id="id4">
-        <div id="error4"></div>
         <button id="b4" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <form id="five">
         <input type=text placeholder="ID в Pubg Mobile" id="id5">
-        <div id="error5"></div>
         <button id="b5" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <form id="six">
         <input type=text placeholder="ID в Pubg Mobile" id="id6">
-        <div id="error6"></div>
         <button id="b6" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
@@ -291,12 +285,59 @@
         
         b1.addEventListener("click", () => {
           let account_id = document.getElementById("id1").value;
-          if(!account_id) {
-            document.getElementById("error1").innerText = 'Ошибка в ID';
-          }
           let data = {
               id: account_id,
               i: '1'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+
+        b2.addEventListener("click", () => {
+          let account_id = document.getElementById("id2").value;
+          let data = {
+              id: account_id,
+              i: '2'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+
+        b3.addEventListener("click", () => {
+          let account_id = document.getElementById("id3").value;
+          let data = {
+              id: account_id,
+              i: '3'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+
+        b4.addEventListener("click", () => {
+          let account_id = document.getElementById("id4").value;
+          let data = {
+              id: account_id,
+              i: '4'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+        
+        b5.addEventListener("click", () => {
+          let account_id = document.getElementById("id5").value;
+          let data = {
+              id: account_id,
+              i: '5'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+
+        b6.addEventListener("click", () => {
+          let account_id = document.getElementById("id6").value;
+          let data = {
+              id: account_id,
+              i: '6'
           }
           tg.sendData(JSON.stringify(data));
           tg.close();
