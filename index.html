@@ -25,40 +25,59 @@
         margin-top: 20px;
       }
 
-      .f1 {
+      #one {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
       }
 
-      .f2 {
+      #two {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
       }
 
-      .f3 {
+      #three {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
       }
 
-      .f4 {
+      #four {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
       }
 
-      .f5 {
+      #five {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
       }
 
-      .f6 {
+      #six {
         display: none;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 70px;
+      }
+      
+      input {
+        width: 80%;
+        outline: none;
+        margin: 10px 5%;
+        margin-left: 8px;
+        padding: 15px 10px;
+        font-size: 14px;
+        border: 2px solid silver;
+        border-radius: 5px
+      }
+
+      input:focus {
+        border-color: #db5d5d;
+      }
+      
+      #main {
+        display: block;
       }
       
       .center {
@@ -74,7 +93,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 200px 200px 200px;
-        grid-gap: 50px;
+        grid-gap: 50px;        
       }
       
       .img {
@@ -108,7 +127,39 @@
       
       .btn:hover {
         background: lightgreen;
-      }   
+      }
+      
+      .pi {
+        border: 0;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-left: 58px;
+        margin-right: 58px;
+        height: 60px;
+        width: 200px;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 500ms ease;
+        color: #ffffff;
+        background: rgb(248, 168, 24); 
+        transition: background .2s linear;        
+      }
+        
+      .pi:hover {
+        background: lightgreen;         
+      }
+      
+      .dar {
+        display: inline-block;
+        background: #8C959D;
+        margin: 10px 5%;
+        margin-top: 30px;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 3px;
+      }
       
       .added-to-cart {
         display: inline-block;
@@ -125,7 +176,7 @@
 </head>
 <body>
     <img src="shop.png" class="img2">
-    <div class="center">
+    <div class="center" id="main">
       <div class="container">
         <div class="inner">
           <div class="item" id="item1">
@@ -155,40 +206,40 @@
         </div>
       </div>      
     </div>
-    <form id="one" class="f1">
+    <form id="one">
         <input type=text placeholder="ID в Pubg Mobile" id="id1">
         <div id="error1"></div>
-        <button id="b1"></button>
+        <button id="b1" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
-    <form id="two" class="f2">
+    <form id="two">
         <input type=text placeholder="ID в Pubg Mobile" id="id2">
         <div id="error2"></div>
-        <button id="b2"></button>
+        <button id="b2" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
-    <form id="three" class="f3">
+    <form id="three">
         <input type=text placeholder="ID в Pubg Mobile" id="id3">
         <div id="error3"></div>
-        <button id="b3"></button>
+        <button id="b3" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
-    <form id="four" class="f4">
+    <form id="four">
         <input type=text placeholder="ID в Pubg Mobile" id="id4">
         <div id="error4"></div>
-        <button id="b4"></button>
+        <button id="b4" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
-    <form id="five" class="f5">
+    <form id="five">
         <input type=text placeholder="ID в Pubg Mobile" id="id5">
         <div id="error5"></div>
-        <button id="b5"></button>
+        <button id="b5" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
-    <form id="six" class="f6">
+    <form id="six">
         <input type=text placeholder="ID в Pubg Mobile" id="id6">
         <div id="error6"></div>
-        <button id="b6"></button>
+        <button id="b6" class="pi">Продолжить</button>
         <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
@@ -209,33 +260,40 @@
         tg.expand();
 
         btn1.addEventListener("click", () => {
-            tg.sendData('1');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("one").style.display = 'block';
         });
 
         btn2.addEventListener("click", () => {
-            tg.sendData('2');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("two").style.display = 'block';
         });
 
         btn3.addEventListener("click", () => {
-            tg.sendData('3');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("three").style.display = 'block';
         });
 
         btn4.addEventListener("click", () => {
-            tg.sendData('4');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("four").style.display = 'block';
         });
 
         btn5.addEventListener("click", () => {
-            tg.sendData('5');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("five").style.display = 'block';
         });
 
         btn6.addEventListener("click", () => {
-            tg.sendData('6');
-            tg.close();
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("six").style.display = 'block';
+        });
+        
+        b1.addEventListener("click", () => {
+          let account_id = document.getElementById("id1").value;
+          let data = '1'
+          tg.sendData(data);
+          tg.close();
         });
     </script>      
 </body>
