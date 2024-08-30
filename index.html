@@ -105,7 +105,7 @@
       }
       
       .img {
-        width: 132px;
+        width: 135px;
         margin-bottom: -25px;
       }
       
@@ -128,7 +128,8 @@
       .btn {
         display: inline-block;
         padding: 10px 10px;
-        margin-top: 30px;
+        margin-top: 35px;
+        margin-bottom: 20px;
         width: 130px;
         border: none;
         background: rgb(248, 168, 24);
@@ -167,8 +168,8 @@
       .teh {
         border: 0;
         border-radius: 5px;
-        margin-top: 60px;
-        margin-bottom: 40px;
+        margin-top: 5px;
+        margin-bottom: 10px;
         font-size: 30px;
         color: #ffffff;
         background: rgb(248, 168, 24);         
@@ -234,6 +235,7 @@
   <div id="r">
     <img src="shop.png" class="img2">
     <div class="center" id="main">
+      <button class="teh" id="tehh">👨‍💼Техподдержка👨‍💼</button>      
       <a href="https://t.me/otzivi_UCShopBot" class="dar2">ОТЗЫВЫ</a>
       <div class="container">
         <div class="inner">
@@ -263,10 +265,9 @@
           </div>
         </div>
       </div>
-      <button class="teh" id="tehh">👨‍💼Техподдержка👨‍💼</button>      
     </div>
   </div>    
-    <form id="one">
+        <form id="one">
         <input type=text placeholder="ID в Pubg Mobile" id="id1">
         <button id="b1" class="pi">Продолжить</button>
         <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
@@ -304,12 +305,12 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
     <script>
         let tg = window.Telegram.WebApp;
-        let btn1 = document.getElementById("btn1");
-        let btn2 = document.getElementById("btn2");
-        let btn3 = document.getElementById("btn3");
-        let btn4 = document.getElementById("btn4");
-        let btn5 = document.getElementById("btn5");
-        let btn6 = document.getElementById("btn6");
+        let bt1 = document.getElementById("btn1");
+        let bt2 = document.getElementById("btn2");
+        let bt3 = document.getElementById("btn3");
+        let bt4 = document.getElementById("btn4");
+        let bt5 = document.getElementById("btn5");
+        let bt6 = document.getElementById("btn6");
         let b1 = document.getElementById("b1");
         let b2 = document.getElementById("b2");
         let b3 = document.getElementById("b3");
@@ -318,37 +319,37 @@
         let b6 = document.getElementById("b6");
         let tehh = document.getElementById("tehh");
         let sms1 = document.getElementById("sms");
-        const textareaHeight = document.getElementById("text");
+        let textareaHeight = document.getElementById("text");
         tg.expand();
 
-        btn1.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("one").style.display = 'block';
+        bt1.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("one").style.display = 'block';
         });
 
-        btn2.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("two").style.display = 'block';
+        bt2.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("two").style.display = 'block';
         });
 
-        btn3.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("three").style.display = 'block';
+        bt3.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("three").style.display = 'block';
         });
 
-        btn4.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("four").style.display = 'block';
+        bt4.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("four").style.display = 'block';
         });
 
-        btn5.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("five").style.display = 'block';
+        bt5.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("five").style.display = 'block';
         });
 
-        btn6.addEventListener("click", () => {
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("six").style.display = 'block';
+        bt6.addEventListener("click", () => {
+          document.getElementById("main").style.display = 'none';
+          document.getElementById("six").style.display = 'block';
         });
         
         b1.addEventListener("click", () => {
