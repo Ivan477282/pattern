@@ -61,6 +61,11 @@
         margin-top: 70px;
       }
       
+      #seven {
+        display: none;
+        text-align: center;
+      }
+      
       input {
         width: 80%;
         outline: none;
@@ -69,7 +74,7 @@
         padding: 15px 10px;
         font-size: 14px;
         border: 2px solid silver;
-        border-radius: 5px
+        border-radius: 5px;
       }
 
       input:focus {
@@ -80,6 +85,9 @@
         display: block;
       }
       
+      #r {
+        display: block;
+      }
       .center {
         display: block;
         justify-content: center;
@@ -105,6 +113,12 @@
         width: 80%;
         margin-top: 20px;
         margin-bottom: 20px;
+      }
+      
+      .img3 {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 70px;
       }
       
       .item {
@@ -150,6 +164,20 @@
         background: lightgreen;         
       }
       
+      .teh {
+        border: 0;
+        border-radius: 5px;
+        margin-top: 70px;
+        margin-bottom: 40px;
+        font-size: 30px;
+        color: #ffffff;
+        background: rgb(248, 168, 24);         
+      }
+        
+      .teh:hover {
+        background: lightgreen;         
+      }
+      
       .dar {
         display: inline-block;
         background: #8C959D;
@@ -184,9 +212,26 @@
         font-weight: 700;
         transition: background .2s linear;
       }
+      
+      .textarea {
+        font-size: 22px;
+        font-family: Arial;
+        border-radius: 15px;
+        resize: none;
+        padding: 5px;
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 40px;
+        min-height: 40px;
+        width: 92%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+      }
     </style>
 </head>
 <body>
+  <div id="r">
     <img src="shop.png" class="img2">
     <div class="center" id="main">
       <a href="https://t.me/otzivi_UCShopBot" class="dar2">ОТЗЫВЫ</a>
@@ -217,8 +262,10 @@
             <button class="btn" id="btn6">Купить</button>
           </div>
         </div>
-      </div>      
+      </div>
+      <button class="teh" id="tehh">👨‍💼Техподдержка👨‍💼</button>      
     </div>
+  </div>    
     <form id="one">
         <input type=text placeholder="ID в Pubg Mobile" id="id1">
         <button id="b1" class="pi">Продолжить</button>
@@ -249,6 +296,11 @@
         <button id="b6" class="pi">Продолжить</button>
         <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
     </form>
+    <form id="seven">
+        <img class="img3" src="teh.png">
+        <textarea id="text" placeholder="Сообщение в ТехПоддержку" class="textarea"></textarea>
+        <button id="sms" class="pi">Продолжить</button>
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
     <script>
         let tg = window.Telegram.WebApp;
@@ -264,6 +316,9 @@
         let b4 = document.getElementById("b4");
         let b5 = document.getElementById("b5");
         let b6 = document.getElementById("b6");
+        let tehh = document.getElementById("tehh");
+        let sms1 = document.getElementById("sms");
+        const textareaHeight = document.getElementById("text");
         tg.expand();
 
         btn1.addEventListener("click", () => {
@@ -351,6 +406,26 @@
           let data = {
               id: account_id,
               i: '6'
+          }
+          tg.sendData(JSON.stringify(data));
+          tg.close();
+        });
+ 
+        tehh.addEventListener("click", () => {
+            document.getElementById("r").style.display = 'none';
+            document.getElementById("seven").style.display = 'block';
+        });
+  
+        textareaHeight.addEventListener("input", (event) => {
+          textareaHeight.style.height = 0;
+          textareaHeight.style.height = textareaHeight.scrollHeight + "px";
+        });
+ 
+        sms1.addEventListener("click", () => {
+          let t = document.getElementById("sms").value;
+          let data = {
+            sms: t,
+            i: '10'
           }
           tg.sendData(JSON.stringify(data));
           tg.close();
