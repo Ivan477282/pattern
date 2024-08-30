@@ -468,7 +468,7 @@
  
         sms1.addEventListener("click", () => {
           let t = document.getElementById("text").value;
-          if(r.test(t)) {            
+          if(t) {            
             let data = {
               id: account_id,
               i: '10'
@@ -479,6 +479,7 @@
             document.getElementById('error7').innerText = 'Ошибка в id';
             document.getElementById("main").style.display = 'none';
             document.getElementById("seven").style.display = 'block';
+          }           
         });
     </script>      
 </body>
