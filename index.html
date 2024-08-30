@@ -267,8 +267,9 @@
       </div>
     </div>
   </div>    
-        <form id="one">
+    <form id="one">
         <input type=text placeholder="ID в Pubg Mobile" id="id1">
+        <div id="error1"></div>
         <button id="b1" class="pi">Продолжить</button>
         <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
     </form>
@@ -320,6 +321,7 @@
         let tehh = document.getElementById("tehh");
         let sms1 = document.getElementById("sms");
         let textareaHeight = document.getElementById("text");
+        var r = /^[0-9]+$/;
         tg.expand();
 
         bt1.addEventListener("click", () => {
@@ -354,12 +356,18 @@
         
         b1.addEventListener("click", () => {
           let account_id = document.getElementById("id1").value;
-          let data = {
+          if(r.test(account_id)) {            
+            let data = {
               id: account_id,
               i: '1'
+            }
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+          } else {
+            document.getElementById('error1').innerText = 'Ошибка в id';
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("one").style.display = 'block';
           }
-          tg.sendData(JSON.stringify(data));
-          tg.close();
         });
 
         b2.addEventListener("click", () => {
