@@ -267,48 +267,48 @@
       </div>
     </div>
   </div>    
-    <form id="one">
-        <input type=text placeholder="ID в Pubg Mobile" id="id1">
-        <div id="error1"></div>
-        <button id="b1" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="two">
-        <input type=text placeholder="ID в Pubg Mobile" id="id2">
-        <div id="error2"></div>
-        <button id="b2" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="three">
-        <input type=text placeholder="ID в Pubg Mobile" id="id3">
-        <div id="error3"></div>
-        <button id="b3" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="four">
-        <input type=text placeholder="ID в Pubg Mobile" id="id4">
-        <div id="error4"></div>
-        <button id="b4" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="five">
-        <input type=text placeholder="ID в Pubg Mobile" id="id5">
-        <div id="error5"></div>
-        <button id="b5" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="six">
-        <input type=text placeholder="ID в Pubg Mobile" id="id6">
-        <div id="error6"></div>
-        <button id="b6" class="pi">Продолжить</button>
-        <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
-    </form>
-    <form id="seven">
-        <img class="img3" src="teh.png">
-        <textarea id="text" placeholder="Сообщение в ТехПоддержку" class="textarea"></textarea>
-        <div id="error7"></div>
-        <button id="sms" class="pi">Продолжить</button>
-    </form>
+  <form id="one">
+    <input type=text placeholder="ID в Pubg Mobile" id="id1">
+    <div id="error1"></div>
+    <button id="b1" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="two">
+    <input type=text placeholder="ID в Pubg Mobile" id="id2">
+    <div id="error2"></div>
+    <button id="b2" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="three">
+    <input type=text placeholder="ID в Pubg Mobile" id="id3">
+    <div id="error3"></div>
+    <button id="b3" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="four">
+    <input type=text placeholder="ID в Pubg Mobile" id="id4">
+    <div id="error4"></div>
+    <button id="b4" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="five">
+    <input type=text placeholder="ID в Pubg Mobile" id="id5">
+    <div id="error5"></div>
+    <button id="b5" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="six">
+    <input type=text placeholder="ID в Pubg Mobile" id="id6">
+    <div id="error6"></div>
+    <button id="b6" class="pi">Продолжить</button>
+    <a href="http://t.me/PubgMobile_id_bot/id_PubgMobile" class="dar">Где взять id в Pubg Mobile?</a>
+  </form>
+  <form id="seven">
+    <img class="img3" src="teh.png">
+    <div id="error7"></div>
+    <textarea id="text" placeholder="Сообщение в ТехПоддержку" class="textarea"></textarea>
+    <button id="sms" class="pi">Продолжить</button>
+  </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
     <script>
         let tg = window.Telegram.WebApp;
@@ -467,16 +467,19 @@
         });
  
         sms1.addEventListener("click", () => {
-            let t = document.getElementById("text").value;
-            if(t) {
-                let data = {
-                id: account_id,
-                i: '10'
-            } else {
-                document.getElementById('error7').innerText = 'Ошибка в сообщении';
-                document.getElementById("main").style.display = 'none';
-                document.getElementById("seven").style.display = 'block';
-            }           
+          let t = document.getElementById("text").value;
+          if(t) {            
+            let data = {
+              id: account_id,
+              i: '10'
+            }
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+          } else {
+            document.getElementById('error7').innerText = 'Ошибка в id';
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("seven").style.display = 'block';
+          }           
         });
     </script>      
 </body>
